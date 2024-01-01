@@ -126,4 +126,25 @@ This hook takes in the validation function and the initial value. I return the s
 const [username, setUsername, isValid] = useStateWithValidation(name => name.length > 5, "")
 ```
 
-## 19.
+## 19. useSize
+This hook takes in an element and it return its size as well as many other usefull information from the **ResizeObserver**.
+```js
+const ref = useRef()
+const size = useSize(ref)
+<textarea ref={ref}></textarea>
+```
+
+## 20. useEffectOnce
+This a simple hook that simulates calling useEffect with [] as the dependencies. It takes in jsut the callback function.
+```js
+useEffectOnce(() => alert("Hi"))
+```
+
+## 21. useClickOutside
+This hooks takes in a ref and a callback. If you click outiside the element, the callback is called.
+``` js
+const ref = useRef()
+useClickOutside(modalRef, () => alert("Callback called!"))
+<p ref={ref}>Lorem ....</p>
+```
+
