@@ -2,7 +2,7 @@ import React from 'react'
 import useArray from '../hooks/useArray'
 
 export default function ArrayComponent() {
-  const { array, set, push, remove, filter, update, clear} = useArray([1, 2, 3, 4, 5, 6])
+  const { array, set, push, remove, filter, update, clear } = useArray([1, 2, 3, 4, 5, 6])
   return (
     <>
       <span>{array.join(", ")}</span>
