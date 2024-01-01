@@ -2,7 +2,7 @@ import React from 'react'
 import useGeolocation from './useGeolocation'
 
 export default function GeolocationComponent() {
-  const { loading, error, data} = useGeolocation()
+  const { loading, error, data } = useGeolocation()
 
   return (
     <>
