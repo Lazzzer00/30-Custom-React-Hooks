@@ -86,3 +86,19 @@ useDeepCompareEffect(() => {
     useDeepCompareEffectCountRef.current.textContent = parseInt(useDeepCompareEffectCountRef.current.textContent) + 1
 }, [person])
 ```
+## 13. useEventListener
+This hook makes working with event listeners easy. Pass it the event, a callback and the element (by default it's the window). 
+``` js
+useEventListener("keydown", (e) => {
+    alert(e.key)
+})
+```
+
+## 14. useOnScreen
+This hook takes a refrence to an element and a margin that is 0px by default and return true if it's visible on the screen
+``` js
+const headerRef = useRef()
+const visible = useOnScreen(headerRef, "-100px")
+<h1 ref={headerRef}>Header</h1>
+```
+
