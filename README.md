@@ -52,7 +52,7 @@ const [age, setAge, removeAge] = useLocalStorage("age", 26)
 ```
 
 ## 9. useAsync
-This hook makes working with async code easy. Pass it a callback and optional dependecies and it return the loading, value and the error if it arrises.
+This hook makes working with async code easy. Pass it a callback and optional dependecies and it return the loading state, value and the error if it arrises.
 ``` js
 const { loading, error, value } = useAsync(() => {
     return new Promise((resolve, reject) => {
@@ -62,4 +62,14 @@ const { loading, error, value } = useAsync(() => {
 })
 ```
 
-## 10. 
+## 10. useFetching
+This hook takes in the url of the data you want to fetch and the options and dependencies are optional. It returns the loading state, value and an error if the arrises.
+``` js
+const { loading, error, value } = useFetch(`https://jsonplaceholder.typicode.com/todos/${id}`, {}, [id])
+```
+
+## 11. useScript
+This hook takes in the url of the script you want to use, it creates a new script element. It return the loading state and an error if it arrises.
+``` js
+const { loading, error } = useScript("https://code.jquery.com/jquery-3.7.1.slim.js")
+```
