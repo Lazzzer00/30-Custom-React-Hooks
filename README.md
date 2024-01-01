@@ -185,3 +185,21 @@ const renderCount = useRenderCount()
 ```
 
 ## 28. useDebugInformation
+Simple hook all the information necessary to debug a component.
+```js
+const info = useDebugInformation("component", props)
+```
+
+## 29. useHover
+Takes in a ref to an element, and it returns **true** if the element is being hovered.
+``` js
+const hovered = useHover(ref)
+```
+
+## 30. useLongPress
+Takes in a ref to an element, a callback, and a delay. After you hold the element for the duration of the delay, the callback is called
+``` js
+useLongPress(ref, () => alert("Long Press detected!"), { delay: 300})
+```
+
+That was the last hook. Hope this was helpful.
