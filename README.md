@@ -115,3 +115,15 @@ const isLarge = useMediaQuery("(min-width: 200px)")
 ```
 
 ## 17. useGeolocation
+This hook takes in optional options and it just returns the loading state, the data which is data about the user location and an error if it arrises.
+``` js
+const { loading, error, data } = useGeolocation()
+```
+
+## 18. useStateWithValidation
+This hook takes in the validation function and the initial value. I return the state, the setState and the isValid boolean.
+```js
+const [username, setUsername, isValid] = useStateWithValidation(name => name.length > 5, "")
+```
+
+## 19.
