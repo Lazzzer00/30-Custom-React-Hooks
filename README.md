@@ -99,6 +99,19 @@ This hook takes a refrence to an element and a margin that is 0px by default and
 ``` js
 const headerRef = useRef()
 const visible = useOnScreen(headerRef, "-100px")
-<h1 ref={headerRef}>Header</h1>
+<h1 ref={headerRef}>Header {visible && "(Visible)</h1>
+
+```
+## 15. useWindowSize
+This simple hook return the width and the height of the window element.
+``` js
+const { width, height } = useWindowSize()
 ```
 
+## 16. useMediaQuery
+This hooks takes in a media query in the form of a css-like string. It return true if the media query is applied.
+``` js
+const isLarge = useMediaQuery("(min-width: 200px)")
+```
+
+## 17. useGeolocation
