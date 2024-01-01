@@ -160,4 +160,28 @@ This hook takes in text that will be copied to clipboard. Install the **copy-to-
 <button onClick={() => copyToClipboard("Copied text!")}>Copy Text</button>
 ```
 
-## 
+## 24. useCookie
+Simple hook that uses the **js-cookie** library. Pass it a key and a value, and create a cookie. It returns the value, an update method and a remove function.
+``` js
+const [value, update, remove] = useCookie("name", "John")
+```
+
+## 25. useTranslation
+This hook returns the language, setLanguage method, setFallBackLanguage method and the translate method (t). 
+``` js
+const { language, setLanguage, setFallbackLanguage, t} = useTranslation()
+```
+
+## 26. useOnlineStatus
+This hook returns true if the user is online.
+``` js
+const online = useOnlineStatus()
+```
+
+## 27. useRenderCount
+This hook return a count of the number of renders. Be careful with **React.StrictMode**.
+``` js
+const renderCount = useRenderCount()
+```
+
+## 28. useDebugInformation
