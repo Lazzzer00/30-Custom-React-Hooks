@@ -148,3 +148,16 @@ useClickOutside(modalRef, () => alert("Callback called!"))
 <p ref={ref}>Lorem ....</p>
 ```
 
+## 22. useDarkMode
+This is a hook that when called applies dark mode to the app. It can be modified to apply any css styles.
+``` js
+<button onClick={() => useDarkMode()}>Use Dark Mode</button>
+```
+
+## 23. useCopyToClipboard
+This hook takes in text that will be copied to clipboard. Install the **copy-to-clipboard** library.
+``` js
+<button onClick={() => copyToClipboard("Copied text!")}>Copy Text</button>
+```
+
+## 
