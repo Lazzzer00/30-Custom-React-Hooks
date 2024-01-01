@@ -73,3 +73,16 @@ This hook takes in the url of the script you want to use, it creates a new scrip
 ``` js
 const { loading, error } = useScript("https://code.jquery.com/jquery-3.7.1.slim.js")
 ```
+
+## 12. useDeepComapareEffect
+This hook is like useEffect but it does get called if the values inside the dependencies haven't changed.
+``` js
+const person = { 
+    age: age,
+    name: "Kyle"
+}
+const useDeepCompareEffectCountRef = useRef()
+useDeepCompareEffect(() => {
+    useDeepCompareEffectCountRef.current.textContent = parseInt(useDeepCompareEffectCountRef.current.textContent) + 1
+}, [person])
+```
