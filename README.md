@@ -52,3 +52,14 @@ const [age, setAge, removeAge] = useLocalStorage("age", 26)
 ```
 
 ## 9. useAsync
+This hook makes working with async code easy. Pass it a callback and optional dependecies and it return the loading, value and the error if it arrises.
+``` js
+const { loading, error, value } = useAsync(() => {
+    return new Promise((resolve, reject) => {
+      const success = true
+      setTimeout(() => success ? resolve("Hi") : reject("Error"), 1000)
+    })
+})
+```
+
+## 10. 
